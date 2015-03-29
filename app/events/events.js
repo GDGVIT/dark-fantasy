@@ -5,8 +5,8 @@ boomerang.controller("EventsController", function ($http, $log, $filter, Config,
     vm.loading = true;
     vm.dateFormat = Config.dateFormat;
     vm.events = { past:[], future:[] };
-
-    var url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/upcoming?callback=JSON_CALLBACK';
+    var url = 'https://www.googleapis.com/plus/v1/people/' + Config.id + '/activities/public?callback=angular.callbacks._0&maxResults=20&key=' + Config.google_api+ ''
+    var testUrl = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/upcoming?callback=JSON_CALLBACK';
     var headers = { 'headers': { 'Accept': 'application/json;' }, 'timeout': 2000 };
     $http.jsonp(url, headers)
         .success(function (data) {
