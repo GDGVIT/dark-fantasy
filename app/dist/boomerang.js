@@ -37,7 +37,7 @@ boomerang.factory('Config', function () {
         'name'          : 'GDG VIT Vellore',
         'id'            : '101018908043689071742',//101018908043689071742
         'google_api'    : 'AIzaSyBLmjZggwek6J_xpdffvOXDcdDn_6sP6iY',
-        'pwa_id'        : '6082910745844433217', // Picasa Web Album id, must belong to Google+ id above
+        'pwa_id'        : '6131627325679555265', // Picasa Web Album id, must belong to Google+ id above
         'domain'        : 'http://www.gdgvitvellore.com',
         'twitter'       : 'gdgvitvellore',
         'facebook'      : 'gdgvitvellore',
