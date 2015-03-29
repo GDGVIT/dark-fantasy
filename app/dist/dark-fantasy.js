@@ -1,6 +1,6 @@
-var boomerang = angular.module('gdgXBoomerang', ['ngRoute', 'ngSanitize', 'ngAria', 'ngAnimate', 'ngMaterial']);
+var dark = angular.module('dark-fantasy', ['ngRoute', 'ngSanitize', 'ngAria', 'ngAnimate', 'ngMaterial']);
 
-boomerang.controller('MainController', function ($rootScope, Config, NavService) {
+dark.controller('MainController', function ($rootScope, Config, NavService) {
     var mc = this;
     mc.chapter_name = Config.name;
     mc.google_plus_link = 'https://plus.google.com/' + Config.id;
@@ -15,7 +15,7 @@ boomerang.controller('MainController', function ($rootScope, Config, NavService)
     });
 });
 
-boomerang.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
+dark.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
 
     $locationProvider.hashPrefix('!');
 
@@ -31,7 +31,7 @@ boomerang.config(function ($routeProvider, $locationProvider, $mdThemingProvider
         .accentPalette('deep-orange');
 });
 
-boomerang.factory('Config', function () {
+dark.factory('Config', function () {
     return {
         // TODO Modify these to configure your app
         'name'          : 'GDG VIT Vellore',
@@ -56,7 +56,7 @@ boomerang.factory('Config', function () {
     };
 });
 
-boomerang.factory('NavService', function () {
+dark.factory('NavService', function () {
     var navTab = '0';
     var navListener;
 
@@ -80,7 +80,7 @@ boomerang.factory('NavService', function () {
     }
 });
 
-boomerang.controller('AboutController', function ($http, $sce, Config, NavService) {
+dark.controller('AboutController', function ($http, $sce, Config, NavService) {
     var vm = this;
     vm.loading = true;
     NavService.setNavTab(0);
@@ -105,7 +105,17 @@ boomerang.controller('AboutController', function ($http, $sce, Config, NavServic
         });
 });
 
-boomerang.controller("EventsController", function ($http, $log, $filter, Config, NavService) {
+dark.controller('NavController', ['$scope', function ($scope) {
+	$scope.nav = [
+		{'name': 'About Us'},
+		{'name': 'What We Do'},
+		{'name': 'Our Works'},
+		{'name': 'Team'},
+		{'name': 'Contact Us'}
+	];
+	console.log($scope.nav);
+}])
+dark.controller("EventsController", function ($http, $log, $filter, Config, NavService) {
     var vm = this;
     NavService.setNavTab(2);
     vm.chapter_name = Config.name;
@@ -161,7 +171,7 @@ boomerang.controller("EventsController", function ($http, $log, $filter, Config,
 });
 
 // Google+ hashtag linky from http://plnkr.co/edit/IEpLfZ8gO2B9mJcTKuWY?p=preview
-boomerang.filter('hashLinky', function() {
+dark.filter('hashLinky', function() {
     var ELEMENT_NODE = 1;
     var TEXT_NODE = 3;
     var linkifiedDOM = document.createElement('div');
@@ -200,7 +210,7 @@ boomerang.filter('hashLinky', function() {
 });
 
 // HTML-ified linky from http://plnkr.co/edit/IEpLfZ8gO2B9mJcTKuWY?p=preview
-boomerang.filter('htmlLinky', function($filter) {
+dark.filter('htmlLinky', function($filter) {
     var ELEMENT_NODE = 1;
     var TEXT_NODE = 3;
     var linkifiedDOM = document.createElement('div');
@@ -235,7 +245,17 @@ boomerang.filter('htmlLinky', function($filter) {
     }
 });
 
-boomerang.controller("NewsController", function ($http, $timeout, $filter, $log, $sce, Config, NavService) {
+dark.controller('NavController', ['$scope', function ($scope) {
+	$scope.nav = [
+		{'name': 'About Us', 'action': '1'},
+		{'name': 'What We Do', 'action': '2'},
+		{'name': 'Our Works', 'action': '3'},
+		{'name': 'Team', 'action': '4'},
+		{'name': 'Contact Us', 'action': '5'}
+	];
+	console.log($scope.nav);
+}])
+dark.controller("NewsController", function ($http, $timeout, $filter, $log, $sce, Config, NavService) {
     var vm = this;
     NavService.setNavTab(1);
     vm.loading = true;
@@ -303,7 +323,7 @@ boomerang.controller("NewsController", function ($http, $timeout, $filter, $log,
     }
 });
 
-boomerang.controller("PhotosController", function ($http, Config, NavService) {
+dark.controller("PhotosController", function ($http, Config, NavService) {
     var vm = this;
     vm.loading = true;
     NavService.setNavTab(3);
@@ -331,73 +351,4 @@ boomerang.controller("PhotosController", function ($http, Config, NavService) {
             vm.error_msg = "Sorry, we failed to retrieve the Photos from the Picasa Web Albums API. Logging out of your Google Account and logging back in may resolve this issue.";
             vm.loading = false;
         });
-});
-boomerang.directive('gplusAlbum', function () {
-    return {
-        scope: {
-            article: '=',
-            attachment: '='
-        },
-        templateUrl: '/app/news/components/gplusAlbum.html'
-    }
-});
-boomerang.directive('gplusArticle', function () {
-    return {
-        scope: {
-            article: '=',
-            attachment: '='
-        },
-        templateUrl: '/app/news/components/gplusArticle.html'
-    }
-});
-boomerang.directive('gplusEvent', function () {
-    return {
-        scope: { article: '=' },
-        templateUrl: '/app/news/components/gplusEvent.html'
-    }
-});
-boomerang.directive('gplusNoAttachments', function () {
-    return {
-        scope: { article: '=' },
-        templateUrl: '/app/news/components/gplusNoAttachments.html'
-    }
-});
-boomerang.directive('gplusPhotoVideo', function () {
-    return {
-        scope: {
-            article: '=',
-            attachment: '='
-        },
-        templateUrl: '/app/news/components/gplusPhotoVideo.html'
-    }
-});
-boomerang.directive('gplusPostContent', function () {
-    return {
-        transclude: true,
-        templateUrl: '/app/news/components/gplusPostContent.html'
-    }
-});
-
-boomerang.directive('gplusPostImage', function () {
-    return {
-        templateUrl: '/app/news/components/gplusPostImage.html'
-    }
-});
-
-boomerang.directive('gplusPostVideo', function ($sce) {
-    return {
-        link: function (scope, element) {
-            scope.videoUrl = $sce.trustAsResourceUrl(scope.attachment.embed.url);
-            scope.getDynamicHeight = function () {
-                return (element.prop('clientWidth') * 0.6) + 'px';
-            }
-        },
-        template: '<iframe ng-style="{ height: getDynamicHeight() }" layout layout-fill ng-src="{{ videoUrl }}" frameborder="0" allowfullscreen></iframe>'
-    }
-});
-
-boomerang.directive('newsItemFooter', function () {
-    return {
-        templateUrl: '/app/news/components/newsItemFooter.html'
-    }
 });

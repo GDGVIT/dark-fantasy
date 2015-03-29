@@ -1,4 +1,4 @@
-boomerang.controller("PhotosController", function ($http, Config, NavService) {
+dark.controller("PhotosController", function ($http, Config, NavService) {
     var vm = this;
     vm.loading = true;
     NavService.setNavTab(3);

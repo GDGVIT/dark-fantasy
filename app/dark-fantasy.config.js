@@ -1,4 +1,4 @@
-boomerang.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
+dark.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
 
     $locationProvider.hashPrefix('!');
 

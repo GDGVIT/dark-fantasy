@@ -1,4 +1,4 @@
-boomerang.factory('Config', function () {
+dark.factory('Config', function () {
     return {
         // TODO Modify these to configure your app
         'name'          : 'GDG VIT Vellore',

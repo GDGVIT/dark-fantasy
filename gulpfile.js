@@ -29,18 +29,18 @@ gulp.task('jshint', ['clean'], function () {
 
 gulp.task('concat', ['clean'], function () {
     return gulp.src([
-        './app/boomerang.module.js',
-        './app/boomerang.config.js',
+        './app/dark-fantasy.module.js',
+        './app/dark-fantasy.config.js',
         './app/services/*.js',
         './app/**/**.js'
     ])
-        .pipe(concat('boomerang.js'))
+        .pipe(concat('dark-fantasy.js'))
         .pipe(gulp.dest(outputPath));
 });
 
 gulp.task('javascript', ['clean', 'concat'], function() {
   var bundler = browserify({
-    entries: [outputPath + 'boomerang.js'],
+    entries: [outputPath + 'dark-fantasy.js'],
     debug: true
   });
 

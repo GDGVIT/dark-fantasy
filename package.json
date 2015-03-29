@@ -1,5 +1,5 @@
 {
-  "name": "boomerang",
+  "name": "dark-fantasy",
   "version": "2.0.2",
   "description": "GDG boilerplate, feeds from DevSite and Google+ using AngularJS and Twitter Bootstrap.",
   "main": "index.html",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gdg-x/boomerang.git"
+    "url": "https://github.com/GDGVIT/dark-fantasy"
   },
   "keywords": [
     "gdg",
@@ -19,9 +19,9 @@
   "author": "GDG-X",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/gdg-x/boomerang/issues"
+    "url": "https://github.com/GDGVIT/dark-fantasy/issues"
   },
-  "homepage": "https://github.com/gdg-x/boomerang",
+  "homepage": "https://github.com/GDGVIT/dark-fantasy",
   "devDependencies": {
     "browserify": "^6.2.0",
     "del": "^0.1.3",

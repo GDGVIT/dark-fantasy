@@ -1,4 +1,4 @@
-boomerang.controller('AboutController', function ($http, $sce, Config, NavService) {
+dark.controller('AboutController', function ($http, $sce, Config, NavService) {
     var vm = this;
     vm.loading = true;
     NavService.setNavTab(0);

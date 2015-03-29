@@ -1,4 +1,4 @@
-boomerang.controller("EventsController", function ($http, $log, $filter, Config, NavService) {
+dark.controller("EventsController", function ($http, $log, $filter, Config, NavService) {
     var vm = this;
     NavService.setNavTab(2);
     vm.chapter_name = Config.name;

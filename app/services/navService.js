@@ -1,4 +1,4 @@
-boomerang.factory('NavService', function () {
+dark.factory('NavService', function () {
     var navTab = '0';
     var navListener;
 
