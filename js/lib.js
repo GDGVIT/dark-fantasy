@@ -6,7 +6,7 @@ $(document).ready(function(){
 $(window).scroll(function() {
     var height = $(window).scrollTop();
 
-    if(height >= 200){
+    if(height >= 600){
         $("header").fadeIn();
     }else{
         $("header").hide();
