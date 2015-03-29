@@ -129,7 +129,7 @@
 		</script>
 		<!-- Main End !-->
 		<!-- About Begin !-->
-		<section id="about" data-scroll-index="1">
+		<section id="about" data-scroll-index="1" ng-controller="AboutController">
 			<div id="about" style="padding:1%;background-color:#039BE6;height:relative">
 				<div class="container center">
 					<br><br>
@@ -139,24 +139,9 @@
 							<img src="images/about.jpg" class="circle responsive-image im" style="height:53%" alt="about">
 						</div>
 						<div class="col s12 m12 l6" style="padding-top:4%">
-							<p style="color:white" align="left">Google Developers Groups was established in VIT on 28th July 2014 and since then 3 successful events were conducted . The group now has 60 Developers ,This groups’s agenda is to introduce new technologies to the students, develop new ideas and polish skills in every possible field including management our faculty coordinator is Prof .P Senthilnathan and has guided us along this journey.
+							<p style="color:white" align="left" ng-bind-html="about">
 							</p>
-							<h4 class="header light"><span style="color:white;float:left">Our Skills</span></h4><br /><br />
-							<div class="col s6 m6 l6"><span style="color:white;">HTML 5</span>
-							<br />
-							<div class="col s12 m12 l12" style="height:23px;float:left"><div style="height:100%;width:93%;background-color:#74D5DE"></div></div>
-						</div>
-						<div class="col s6 m6 l6"><span style="color:white;">CSS 3</span>
-						<br />
-						<div class="col s12 m12 l12" style="height:23px;float:left"><div style="height:100%;width:66%;background-color:#74D5DE"></div></div>
-					</div>
-					<div class="col s6 m6 l6" style="margin-top:10px"><span style="color:white;">PHP/MySQL</span>
-					<br />
-					<div class="col s12 m12 l12" style="height:23px;float:left"><div style="height:100%;width:98%;background-color:#74D5DE"></div></div>
-				</div>
-				<div class="col s6 m6 l6" style="margin-top:10px"><span style="color:white;">JavaScript</span>
-				<br />
-				<div class="col s12 m12 l12" style="height:23px;float:left"><div style="height:100%;width:80%;background-color:#74D5DE"></div></div>
+							<!-- <div class="col s12 m12 l12" style="height:23px;float:left"><div style="height:100%;width:80%;background-color:#74D5DE"></div></div> -->
 			</div>
 		</div>
 	</div>
