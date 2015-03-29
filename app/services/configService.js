@@ -2,9 +2,9 @@ boomerang.factory('Config', function () {
     return {
         // TODO Modify these to configure your app
         'name'          : 'GDG VIT Vellore',
-        'id'            : '106628518438662355516',
+        'id'            : '101018908043689071742',//101018908043689071742
         'google_api'    : 'AIzaSyBLmjZggwek6J_xpdffvOXDcdDn_6sP6iY',
-        'pwa_id'        : '5915725140705884785', // Picasa Web Album id, must belong to Google+ id above
+        'pwa_id'        : '6131627325679555265', // Picasa Web Album id, must belong to Google+ id above
         'domain'        : 'http://www.gdgvitvellore.com',
         'twitter'       : 'gdgvitvellore',
         'facebook'      : 'gdgvitvellore',
