@@ -1,0 +1,142 @@
+input, textarea{
+	color:white;
+}
+#contact{
+  padding:1%;
+  background-image:url(../images/img.jpg);
+  opacity:0.9;
+  color:white;
+}
+#about{
+  padding:1%;
+  background-color:#039BE6;
+  height:relative
+}
+#facts{
+  padding:1%;
+  background-color:#3949AB;
+  padding-bottom:3%
+}
+#work{
+  background-color:#039BE6;
+  padding:1%;
+}
+#facts{
+  style="padding:1%;
+  background-color:#3949AB;
+}
+#team{
+  padding:1%;
+  margin-bottom:2%;
+}
+.line1{
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  border-style: inset;
+  border-width: 1px;
+}
+.line2{
+ display: block;
+ margin-top: 0em;
+ margin-bottom: 0.5em;
+ border-style: inset;
+ border-width: 1px;
+}
+.mtext{
+  font-size:80px;
+  color:#1BBC9B;
+}
+.ntext{
+  font-size:30px;
+  color:white;
+}
+@media screen and (max-width: 700px) {
+  .mtext{
+    font-size:40px;
+  }
+  .ntext{
+    font-size:15px;
+  }
+}
+@media screen and (max-width: 1100px) and (min-width: 701px){
+  .mtext{
+    font-size:60px;
+  }
+  .ntext{
+    font-size:22px;
+  }
+}
+#row_style
+{
+ margin-left:30%;
+ margin-top:3%;
+}
+nav {
+  background-color:#212121;
+}
+.m_text{
+
+  font-size:80px;
+  color:#1BBC9B;
+}
+.n_text{
+  font-size:30px;
+  color:#1BBC9B;
+}
+@media screen and (min-width: 800px)
+{
+	#image
+	{
+		width:35%; float:right;
+	}
+}
+@media screen and (max-width: 799px)
+{
+	#image
+	{
+		width:0px;
+	}
+}
+@media screen and (max-width: 700px) {
+  .m_text{
+    font-size:30px;
+  }
+  .n_text{
+    font-size:9px;
+  }
+}
+@media screen and (max-width: 1100px) and (min-width: 701px){
+  .m_text{
+    font-size:60px;
+  }
+  .n_text{
+    font-size:22px;
+  }
+}
+@media screen and (min-width: 700px){
+  .main{
+    height:100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+	.line1{
+		margin-left:100px;
+		margin-right:100px;
+	}
+	.line2{
+		margin-left: 75px;
+		margin-right: 75px;
+	}
+}
+@media screen and (min-width: 900px) {
+	.line1{
+		margin-left: 400px;
+		margin-right: 400px;
+	}
+	.line2{
+		margin-left: 375px;
+		margin-right: 375px;
+	}
+}
