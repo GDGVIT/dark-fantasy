@@ -201,6 +201,29 @@
        </div>
     </section>
     <!-- Our Works End!-->
+    <!-- Our Works Begin!-->
+    <section id="photo" data-scroll-index="3" ng-controller="PhotosController">
+       <div id="photo">
+          <div class="container col s12 m12" style="margin-bottom:3%">
+             <br><br>
+             <h2 class="header center light"><span style="color:white">Our Photos</span></h2>
+             <p class="center" style="color:white">Our gdg photos from google plus</p>
+             <div class="row center">
+                <div class="col s12 m12 l12" style="margin-bottom:2%">
+                  <div class="photos-wrapper">
+                    <input type="text" placeholder="search" ng-model="search">
+                    <div class="photo-item" ng-repeat="photo in photos | filter:search">
+                      <a href="{{photo.link}}" target="_blank">
+                         <img class="materialboxed col s3 m3 l3" alt="{{photo.alt}}" src="{{photo.src}}" title="{{photo.title}}">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <!-- Our Works End!-->
     <!-- Facts Begin!-->
     <section id="facts">
        <div id="facts">
