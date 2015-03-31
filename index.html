@@ -224,6 +224,42 @@
        </div>
     </section>
     <!-- Our Works End!-->
+    <!-- Our Works Begin!-->
+    <section id="news" data-scroll-index="3" ng-controller="NewsController">
+       <div id="photo">
+          <div class="container col s12 m12" style="margin-bottom:3%">
+             <br><br>
+             <h2 class="header center light"><span style="color:white">Our News</span></h2>
+             <p class="center" style="color:white">Our gdg news from google plus</p>
+             <div class="row center">
+                <div class="col s12 m12 l12" style="margin-bottom:2%">
+                  <div class="news-wrapper">
+                    <div class="news" ng-repeat = "n in news">
+                        <div class="row">
+                          <div class="col s12 m7">
+                            <div class="card medium">
+                              <div class="card-image">
+                                <img src="{{n.object.attachments[0].image.url}}">
+                                <span class="card-title">{{n.title}}</span>
+                              </div>
+                              <div class="card-content">
+                                <p  ng-bind-html="n.object.content"></p>
+                              </div>
+                              <div class="card-action">
+                                <a href="#">This is a link</a>
+                                <a href='#'>This is a link</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <!-- Our Works End!-->
     <!-- Facts Begin!-->
     <section id="facts">
        <div id="facts">
