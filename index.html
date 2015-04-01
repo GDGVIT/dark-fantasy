@@ -41,7 +41,7 @@
        <div class="navbar-fixed">
           <nav style="overflow:visible">
              <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img src="images/logo_dev.png" alt="logo"></a>
+                <a href="#" onclick="$('html, body').animate({scrollTop: $('#hero').offset().top}, 1000);" class="brand-logo"><img src="images/logo_dev.png" alt="logo"></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                 <ul class="right hide-on-med-and-down">
                    <li ng-repeat="name in nav"><a href="javascript:void(0)" data-scroll-nav="{{name.action}}">{{name.name}}</a></li>
@@ -64,7 +64,7 @@
                 <hr style="width:35%;height:3px;background-color:white;margin-top:-2.75%">
                 <h2 class="header light" style="margin-top:7%"><span style="color:white">We Create The Future</span></h2>
                 <br />
-                <a href="#about" class="btn-floating btn-large waves-effect waves-light red fadeIn" ><i class="mdi-navigation-expand-more"></i></a>
+               <a onclick="$('html, body').animate({scrollTop: $('#about').offset().top}, 700);" class="btn-floating btn-large waves-effect waves-light red fadeIn" ><i class="mdi-navigation-expand-more"></i></a>
              </div>
           </div>
        </div>
@@ -206,7 +206,7 @@
     </section>
     <!-- Our Works End!-->
     <!-- Our Works Begin!-->
-    <section id="photo" data-scroll-index="3" ng-controller="PhotosController">
+    <section id="photo" data-scroll-index="4" ng-controller="PhotosController">
        <div id="photo">
           <div class="container col s12 m12" style="margin-bottom:3%">
              <br><br>
@@ -231,7 +231,7 @@
     </section>
     <!-- Our Works End!-->
     <!-- Our Works Begin!-->
-    <section id="news" data-scroll-index="3" ng-controller="NewsController"  style="background-color:#3949ab">
+    <section id="news" data-scroll-index="5" ng-controller="NewsController"  style="background-color:#3949ab">
        <div id="photo">
           <div class="container col s12 m12 l12" style="margin-bottom:3%">
              <br><br>
@@ -242,7 +242,7 @@
                   <div class="news-wrapper">
                     <div class="news" ng-repeat = "n in news">
                         <div class="">
-                          <div class="col s11 m11 l5">
+                          <div class="col s11 m11 l4">
                             <div class="card medium">
                               <div class="card-image">
                                 <img src="{{n.object.attachments[0].image.url}}">
@@ -264,7 +264,7 @@
     <!-- Our Works End!-->
 
     <!-- Team Begin!-->
-    <section id="team" data-scroll-index="4">
+    <section id="team" data-scroll-index="6">
        <div id="team">
           <br><br>
           <h2 class="header center light"><span style="color:#7E8494">Our Team</span></h2>
@@ -420,7 +420,7 @@
     </section>
     <!-- Team End!-->
     <!-- Contact Begin!-->
-    <section id="contact" data-scroll-index="5">
+    <section id="contact" data-scroll-index="7">
        <div id="contact">
           <br><br>
           <h2 class="header center light"><span style="color:white">STAY CONNECTED</span></h2>
