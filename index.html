@@ -31,6 +31,10 @@
     <script src="bower_components/angular-material/angular-material.min.js" type="text/javascript"></script>
     <script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
     <script src="/app/dist/dark-fantasy.js" type="text/javascript"></script>
+    <style type="text/css">
+    ::-webkit-scrollbar{display:none;}
+
+    </style>
  </head>
  <body>
     <header style="display:none;" ng-controller="NavController">
@@ -206,12 +210,14 @@
        <div id="photo">
           <div class="container col s12 m12" style="margin-bottom:3%">
              <br><br>
-             <h2 class="header center light"><span style="color:white">Our Photos</span></h2>
+
+             <h2 class="header center light"><span style="color:#7e8494">Our Photos</span></h2>
              <p class="center" style="color:white">Our gdg photos from google plus</p>
              <div class="row center">
+               <input type="text" placeholder="Search by Events" ng-model="search" style="color:#ee6373;overflow:-moz-scrollbars-none;">
                 <div class="col s12 m12 l12" style="margin-bottom:2%">
-                  <div class="photos-wrapper">
-                    <input type="text" placeholder="search" ng-model="search">
+                  <div class="photos-wrapper card medium" style="overflow-y:auto;">
+
                     <div class="photo-item" ng-repeat="photo in photos | filter:search">
                       <a href="{{photo.link}}" target="_blank">
                          <img class="materialboxed col s3 m3 l3" alt="{{photo.alt}}" src="{{photo.src}}" title="{{photo.title}}">
@@ -225,7 +231,7 @@
     </section>
     <!-- Our Works End!-->
     <!-- Our Works Begin!-->
-    <section id="news" data-scroll-index="3" ng-controller="NewsController">
+    <section id="news" data-scroll-index="3" ng-controller="NewsController"  style="background-color:#3949ab">
        <div id="photo">
           <div class="container col s12 m12" style="margin-bottom:3%">
              <br><br>
@@ -260,74 +266,7 @@
        </div>
     </section>
     <!-- Our Works End!-->
-    <!-- Facts Begin!-->
-    <section id="facts">
-       <div id="facts">
-          <div class="container col s12">
-             <h2 class="header center light"><span style="color:white">Some Facts About Us</span></h2>
-             <p class="center" style="color:white">At GDG VIT Vellore, we have set out goals considering the skills of our inner circle members to take care of projects assigned.</p>
-             <br />
-             <div id="loader" class="row center">
-                <div class="col s12 m12">
-                   <span class="light col s3 m3 mtext">&nbsp;&nbsp;<span id="coding">61</span>%</span>
-                   <span class="light col s3 m3 mtext">&nbsp;&nbsp;<span id="testing">45</span>%</span>
-                   <span class="light col s3 m3 mtext">&nbsp;&nbsp;<span id="designing">35</span>%</span>
-                   <span class="light col s3 m3 mtext">&nbsp;&nbsp;<span id="marketing">30</span>%</span>
-                </div>
-                <div class="col s12 ntext">
-                   <span class="light col s3 m3 ntext">CODING</span>
-                   <span class="light col s3 m3 ntext">Designing</span>
-                   <span class="light col s3 m3 ntext">Beta Tesing</span>
-                   <span class="light col s3 m3 ntext">Marketing/Branding</span>
-                </div>
-             </div>
-          </div>
-          <script>
-             var off = $("#loader").offset().top+2500;
-             	var options = [
-             	{selector: '#loader', offset: off, callback: 'f1()' },
-             	{selector: '#loader', offset: off, callback: 'f2()' },
-             	{selector: '#loader', offset: off, callback: 'f3()' },
-             	{selector: '#loader', offset: off, callback: 'f4()' },
-             	];
-             	scrollFire(options);
-             	var  $coding = $('#coding'),
-             	$designing = $('#testing'),
-             	$testing = $('#designing'),
-             	$marketing = $('#marketing'),
-             	sV1 = $coding.text(),
-             	sV2 = $designing.text(),
-             	sV3 = $testing.text(),
-             	sV4 = $marketing.text(),
-             	eV1 = 96,
-             	eV2 = 80,
-             	eV3 = 70,
-             	eV4 = 65;
-             	var delay = 70;
-             	function f1(){
-             		$coding.text(++sV1);
-             		if(sV1<eV1)
-             		setTimeout(f1,delay);
-             	}
-             	function f2(){
-             		$designing.text(++sV2);
-             		if(sV2<eV2)
-             		setTimeout(f2,delay);
-             	}
-             	function f3(){
-             		$testing.text(++sV3);
-             		if(sV3<eV3)
-             		setTimeout(f3,delay);
-             	}
-             	function f4(){
-             		$marketing.text(++sV4);
-             		if(sV4<eV4)
-             		setTimeout(f4,delay);
-             	}
-          </script>
-       </div>
-    </section>
-    <!-- Facts End!-->
+
     <!-- Team Begin!-->
     <section id="team" data-scroll-index="4">
        <div id="team">
